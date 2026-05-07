@@ -1,12 +1,24 @@
-function saludar() {
-    // Obtener el valor del input
+let contadorSaludos = 0;
+
+function saludar(){
+
     let nombre = document.getElementById("nombre").value;
-    // Validar si el usuario escribió algo
-    if (nombre === "") {
-        document.getElementById("resultado").innerText = "Por favor, ingresa tu nombre.";
-    } else {
-        document.getElementById("resultado").innerText = "Hola " + nombre + ", bienvenido al sistema.";
+    let resultado = document.getElementById("resultado");
+
+    if(nombre.trim() === ""){
+        resultado.innerText = "Por favor ingrese un nombre.";
+        resultado.style.color = "red";
+        return;
     }
+
+    contadorSaludos++;
+
+    resultado.innerText =
+        "Hola " + nombre +
+        ". Bienvenido al sistema. " +
+        "Saludos realizados: " + contadorSaludos;
+
+    resultado.style.color = "green";
 }
 
 function validarCorreo() {
