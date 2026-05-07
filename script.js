@@ -29,3 +29,7 @@ function validarCorreo() {
     document.getElementById("mensajeCorreo").innerText = "Correo registrado correctamente.";
     }
 }
+
+function cambiarTema(){
+    document.body.classList.toggle("dark-mode");
+}
